@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:simbora/screens/home_screen.dart';
 import 'package:simbora/screens/login_screen.dart';
 import 'package:simbora/screens/signup_screen.dart';
 import 'package:simbora/screens/splash_screen.dart';
@@ -12,6 +13,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
   runApp(const MyApp());
 }
 
@@ -34,6 +36,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/SignupScreen": (context) => const SignupScreen(),
         "/LoginScreen": (context) => const LoginScreen(),
+        "/": (context) => const HomeScreen(),
       },
     );
   }
